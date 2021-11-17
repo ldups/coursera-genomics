@@ -51,7 +51,7 @@ p = 'GGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCGAGG'
 bm_o = bm_preproc.BoyerMoore(p, alphabet = 'ATCG')
 
 occurencesBM, numCharsBM, numAlignsBM = boyer_moore(p, bm_o, genome)
-#occurencesN, numCharsN,  numAlignsN = naive(p, genome)
+occurencesN, numCharsN,  numAlignsN = naive(p, genome)
 
-#print('Naive chars:' + str(numCharsN) + '/nNaiveAligns:' + str(numAlignsN))
+print('Naive chars:' + str(numCharsN) + '\nNaiveAligns:' + str(numAlignsN))
 print('BM chars:' + str(numCharsBM) + '\nBMAligns:' + str(numAlignsBM))
