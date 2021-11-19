@@ -62,7 +62,7 @@ def IndexQueryApprox(p, t, maxMismatch, kMerLen):
                     break
 
             if numMisMatches <= maxMismatch:
-                confirmedHits.add(hit)
+                confirmedHits.add(hit -start)
 
     return list(confirmedHits)
 
@@ -87,5 +87,7 @@ genome = readFASTA.readGenome(filename)
 p = 'GGCGCGGTGGCTCACGCCTGTAAT'
 
 #print(genome)
-print(IndexQueryApprox(p, genome, 2, 8))
+indexResult = IndexQueryApprox(p, genome, 2, 8)
+indexResult.sort()
+print(indexResult)
 print(naive_2mm(p, genome))
