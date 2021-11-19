@@ -19,20 +19,17 @@ class Index(object):
             i += 1
         return hits
 
-    def queryIndex(index, p, t):
+    def queryIndex(p, t, index):
         k = index.k
-        offsets = []
+        offsets =  []
         for i in index.query(p):
-            #verification
             if p[k:] == t[i+k:i+len(p)]:
+                #verification
                 offsets.append(i)
         return offsets
 
+
 t = 'GCTACGATCTAGAATCTA'
 p = 'TCTA'
-
 index = Index(t, 2)
 print(index.queryIndex(p, t))
-
-
-
