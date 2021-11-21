@@ -1,5 +1,6 @@
 import bisect
-   
+import readFASTA
+
 class SubseqIndex(object):
     """ Holds a subsequence index for a text T """
     
@@ -29,10 +30,46 @@ class SubseqIndex(object):
 
 def querySubSeqIndex(t, p, k, ival, maxMismatch):
     subseqO = SubseqIndex(t, k, ival)
-    confirmedHits = []
-    for i in range(0, len(p) / k):
+    confirmedHits = set()
+    totalIndexHits = 0
+    
+    for i in range(0, min(int(len(p)/k), len(p))):
         initialHits = subseqO.query(p[i:])
-        numMisMatches = 0
+        
         for hit in initialHits:
-            
-            if not p[j] == t[m-start + j]:
+            numMisMatches = 0
+            totalIndexHits += 1
+            #verification before start
+            for j in range(0, i):
+                if not p[j] == t[hit - i + j]:
+                    numMisMatches += 1
+                if numMisMatches > maxMismatch:
+                    break
+
+            #verification after start
+            for j in range(i + 1, len(p)):
+                if not j - i % ival == 0:
+                    if not p[j] == t[hit - i + j]:
+                        numMisMatches += 1
+                    if numMisMatches > maxMismatch:
+                        break
+
+            if numMisMatches <= maxMismatch:
+                confirmedHits.add(hit-i)
+
+    return list(confirmedHits), totalIndexHits
+
+filename = 'chr1.GRCh38.excerpt.fasta'
+genome = readFASTA.readGenome(filename)
+p = 'GGCGCGGTGGCTCACGCCTGTAAT'
+
+indexResult, totalHits = querySubSeqIndex(genome, p, 8, 3, 2)
+indexResult.sort()
+print(indexResult, totalHits)
+
+#print(genome[160162:160186])
+
+#p = 'English measure backward'
+#filename = 'pg1110.txt'
+#t = open(filename).read()
+#print(querySubSeqIndex(t, p, 8, 3, 2))
