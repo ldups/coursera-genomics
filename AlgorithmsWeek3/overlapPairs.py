@@ -17,3 +17,10 @@ from itertools import permutations
 
 print(permutations(1, 2, 3), 1)
 
+def naiveOverlapMap(reads, k):
+    olaps = {}
+    for a,b  in permutations(reads, 2):
+        overlapLen = overlap(a, b, min_length = k)
+        if overlapLen > 0:
+            olaps[(a, b)] = overlapLen
+    return olaps
