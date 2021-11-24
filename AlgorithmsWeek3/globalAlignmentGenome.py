@@ -40,14 +40,32 @@ def findGlobalAlignment(p, genome):
                 diagDist = d[i-1][j-1] + 1
             d[i][j] = min(horizonDist, verticalDist, diagDist)
 
+    #find min distance and index in bottom row that corresponds
     closestIndex = -1
     minDist = d[len(p)][0]
-    for i in range(1, len(genome)):
-        if d[len(p)][i] > minDist:
+    for i in range(1, len(genome) + 1):
+        if d[len(p)][i] < minDist:
             minDist = d[len(p)][i]
             closestIndex = i
 
-    return minDist, closestIndex
+    i = len(p)
+    j = closestIndex
+    while i > 0:
+        elementList = []
+        #0 = diagonal, 1 = horizontal, 2 = vertical
+        diagElement = d[i-1][j-1]
+        horizElement = d[i][j-1]
+        vertElement = d[i-1][j]
+        elementList.extend([diagElement, horizElement, vertElement])
+        if elementList.index(min(elementList)) == 0:
+            i -= 1
+            j -= 1
+        elif elementList.index(min(elementList)) == 1:
+            j -= 1
+        else:
+            i -= 1
+
+    return minDist, j
     
 
 
@@ -62,12 +80,10 @@ def readGenome(filename):
     return genome
 
 
-'''filename = 'AlgorithmsWeek3\chr1.GRCh38.excerpt (1).fasta'
-genome = readGenome(filename)'''
+filename = 'AlgorithmsWeek3\chr1.GRCh38.excerpt (1).fasta'
+genome = readGenome(filename)
+p = 'GATTTACCAGATTGAG'
 
-p = 'GCGTATGC'
-t = 'TATTGGCTATACGGTT'
-
-print(findGlobalAlignment(p, t))
+print(findGlobalAlignment(p, genome))
 
 
