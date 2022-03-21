@@ -72,8 +72,8 @@ filename = 'AlgorithmsWeek4\mysteryGenome.fq'
 with open(filename, 'r') as opened_file:
     reads = parse_fastq(opened_file)
 
-genome = greedySCS(reads, 30)
-#print('A', genome.count('A'))
-#print('T', genome.count('T'))
-#print('C', genome.count('C'))
-#print('G', genome.count('G'))
+genome = scs(reads)
+print('A', genome.count('A'))
+print('T', genome.count('T'))
+print('C', genome.count('C'))
+print('G', genome.count('G'))
