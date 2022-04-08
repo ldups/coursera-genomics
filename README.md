@@ -1,6 +1,6 @@
 # coursera-genomics
 # Overview
-This repository contains code I wrote while enrolled in the [Coursera Genomic Data Specialization](https://www.coursera.org/specializations/genomic-data-science). In particular, tje repository contains code from Course 2 [Python for Genomic Data Science](https://www.coursera.org/learn/python-genomics?specialization=genomic-data-science) and Course 3 [Algorithms for DNA Sequencing](https://www.coursera.org/learn/dna-sequencing?specialization=genomic-data-science). The repository also contains several files provided by the course for use in practicals and homeworks, including FASTA and FASTQ files.
+This repository contains code I wrote while enrolled in the [Coursera Genomic Data Specialization](https://www.coursera.org/specializations/genomic-data-science). In particular, the repository contains code from Course 2 [Python for Genomic Data Science](https://www.coursera.org/learn/python-genomics?specialization=genomic-data-science) and Course 3 [Algorithms for DNA Sequencing](https://www.coursera.org/learn/dna-sequencing?specialization=genomic-data-science). The repository also contains several files provided by the course for use in practicals and homeworks, including FASTA and FASTQ files.
 
 # Files Included
 ## Helper Methods
