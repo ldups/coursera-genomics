@@ -69,13 +69,6 @@ for a,b  in permutations(reads, 2):
             olaps[(a, b)] = overlapLen
 
 print(len(olaps))
-
-
 matches, numNodes = findAllOverlaps(genomeDict, reads, 30)
 print(numNodes)
 print(len(matches))
-
-
-#reads = ['CGTACG', 'TACGTA', 'GTACGT', 'ACGTAC', 'GTACGA', 'TACGAT']
-#genomeDict = createIndex(reads, 5)
-#print(findAllOverlaps(genomeDict, reads, 5))

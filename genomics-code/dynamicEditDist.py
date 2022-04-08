@@ -18,7 +18,3 @@ def editDistance(x, y):
             d[i][j] = min(horizonDist, verticalDist, diagDist)
 
     return d[-1][-1]
-
-
-
-print(editDistance('hello', 'herllo'))

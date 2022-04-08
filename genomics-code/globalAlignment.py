@@ -27,6 +27,7 @@ score = [[0, 4, 2, 4, 8], \
         [4, 2, 4, 0, 8], \
         [8, 8, 8, 8, 8]]
 
+#examples used to test
 x = 'TACCAGATT'
 y = 'TACCTAGATC'
 print(globalAlignment(x,y))

@@ -1,5 +1,5 @@
 import bisect
-import readFASTA
+import readFASTA 
 
 class Index(object):
     #create and query index
@@ -74,13 +74,12 @@ def naive_2mm(p, t):
             occurrences.append(i)
     return occurrences
 
+#test example
 filename = 'chr1.GRCh38.excerpt.fasta'
 genome = readFASTA.readGenome(filename)
 
 p = 'GGCGCGGTGGCTCACGCCTGTAAT'
 
-#print(genome)
 indexResult, totHits = IndexQueryApprox(p, genome, 2, 8)
 indexResult.sort()
 print(len(totHits))
-#print(naive_2mm(p, genome))

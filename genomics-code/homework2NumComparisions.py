@@ -44,6 +44,7 @@ def naive(p, t):
     return occurrences, numCharComps, numAlignsTried
 
 
+#testing using file provided by course
 fileName = 'chr1.GRCh38.excerpt.fasta'
 genome = readFASTA.readGenome(fileName)
 

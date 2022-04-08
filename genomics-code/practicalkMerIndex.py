@@ -28,7 +28,7 @@ class Index(object):
                 offsets.append(i)
         return offsets
 
-
+#test example
 t = 'GCTACGATCTAGAATCTA'
 p = 'TCTA'
 index = Index(t, 2)

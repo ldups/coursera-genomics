@@ -42,4 +42,5 @@ def greedySCS(reads, k):
         reada, readb, olen = pick_maximal_overlap(reads, k)
     return ''.join(reads)
 
+#test example
 print(greedySCS(['ABC', 'BCA', 'CAB'], 1))

@@ -187,22 +187,21 @@ def findMostRepeatTotal(length):
 	return repeats
 
 
-#print(findAllOrfsForward(1))
-#print('longest ORF:',findLongestORF(3, 'forward'))
-#print('shortest ORF:', findShortestORF(2, 'forward'))
-#print(findORFS(sequenceDict['gi|142022655|gb|EQ086233.1|16'], 1))
-#print(findORFS(sequenceDict['gi|142022655|gb|EQ086233.1|16'], 2))
-#print(findORFS(sequenceDict['gi|142022655|gb|EQ086233.1|16'], 3))
-numSequences()
-#print(findLongestORFofSequence('forward', 'gi|142022655|gb|EQ086233.1|16'))
-
-#print(findTotalNumRepeat('CATCGCC'))
-#print(findTotalNumRepeat('GCGCGCA'))
-#print(findTotalNumRepeat('CGCGCCG'))
-#print(findTotalNumRepeat('TGCGCGC'))
-#print(findRepeats(sequenceDict['gi|142022655|gb|EQ086233.1|16'], 6))
-
-print(findMostRepeatTotal(2))
+#used to test
+	#print(findAllOrfsForward(1))
+	#print('longest ORF:',findLongestORF(3, 'forward'))
+	#print('shortest ORF:', findShortestORF(2, 'forward'))
+	#print(findORFS(sequenceDict['gi|142022655|gb|EQ086233.1|16'], 1))
+	#print(findORFS(sequenceDict['gi|142022655|gb|EQ086233.1|16'], 2))
+	#print(findORFS(sequenceDict['gi|142022655|gb|EQ086233.1|16'], 3))
+	#numSequences()
+	#print(findLongestORFofSequence('forward', 'gi|142022655|gb|EQ086233.1|16'))
+	#print(findTotalNumRepeat('CATCGCC'))
+	#print(findTotalNumRepeat('GCGCGCA'))
+	#print(findTotalNumRepeat('CGCGCCG'))
+	#print(findTotalNumRepeat('TGCGCGC'))
+	#print(findRepeats(sequenceDict['gi|142022655|gb|EQ086233.1|16'], 6))
+	#print(findMostRepeatTotal(2))
 
 
 
