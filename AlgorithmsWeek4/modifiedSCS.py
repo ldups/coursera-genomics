@@ -37,5 +37,4 @@ def scs(ss):
     return shortest_sup, shortestStrings  # return shortest
 
 print(scs(['CCT', 'CTT', 'TGC', 'TGG', 'GAT', 'ATT']))
-strings =  ['ABC', 'BCA', 'CAB']
-print(scs(strings))
+
