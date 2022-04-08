@@ -59,6 +59,7 @@ def querySubSeqIndex(t, p, k, ival, maxMismatch):
 
     return list(confirmedHits), totalIndexHits
 
+#testing using course resources
 filename = 'chr1.GRCh38.excerpt.fasta'
 genome = readFASTA.readGenome(filename)
 p = 'GGCGCGGTGGCTCACGCCTGTAAT'
@@ -66,10 +67,3 @@ p = 'GGCGCGGTGGCTCACGCCTGTAAT'
 indexResult, totalHits = querySubSeqIndex(genome, p, 8, 3, 2)
 indexResult.sort()
 print(indexResult, totalHits)
-
-#print(genome[160162:160186])
-
-#p = 'English measure backward'
-#filename = 'pg1110.txt'
-#t = open(filename).read()
-#print(querySubSeqIndex(t, p, 8, 3, 2))

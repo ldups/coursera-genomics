@@ -67,18 +67,12 @@ def createIndex(reads, k):
             index[kmer].add(read)
     return index
 
+#testing using course resources
 filename = 'AlgorithmsWeek4\mysteryGenome.fq'
 with open(filename, 'r') as opened_file:
     reads = parse_fastq(opened_file)
 
-<<<<<<< HEAD
-genome = scs(reads)
-=======
-#print(greedySCS(['CCT', 'CTT', 'TGC', 'TGG', 'GAT', 'ATT'], 1))
-
-
 genome = greedySCS(reads, 30)
->>>>>>> 36c82b5bf125b1d3f3830fc612b19686f25b20ee
 print('A', genome.count('A'))
 print('T', genome.count('T'))
 print('C', genome.count('C'))

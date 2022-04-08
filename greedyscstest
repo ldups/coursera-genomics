@@ -72,8 +72,7 @@ def updateIndex(read1, read2, combRead, index, k):
                 index[kmer] = set()
             index[kmer].add(combRead)
 
-#print(greedySCS(['ABC', 'BCA', 'CAB'], 2))
-
+#testing using course resources
 filename = 'AlgorithmsWeek4\mysteryGenome.fq'
 with open(filename, 'r') as opened_file:
     reads = parse_fastq(opened_file)

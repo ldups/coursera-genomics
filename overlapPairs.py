@@ -10,9 +10,6 @@ def overlap(a, b,  minLength):
             return len(a) - start #length of overlap
         start += 1
 
-#print(overlap('TTACGT', 'CGTACCGT', 3))
-
-
 from itertools import permutations
 
 print(permutations(1, 2, 3), 1)
